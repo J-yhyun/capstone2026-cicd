@@ -12,7 +12,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/members")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:63352") // 리액트 서버 포트 허용_____
+@CrossOrigin(origins = {"http://localhost:63352", "http://localhost:63342"}) // 도커 프론트(63352) + IntelliJ 내장서버(63342) 둘 다 허용
 public class MemberController {
 
     private final MemberRepository memberRepository;
